@@ -1,0 +1,8 @@
+.FormContents {
+    border-color: lightblue;
+    background-color: #10131a;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 1rem;
+}

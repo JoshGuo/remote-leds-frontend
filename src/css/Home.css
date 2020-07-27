@@ -1,0 +1,18 @@
+.Home {
+    background-color: #282c34;
+    text-align: center;
+    min-height: 100vh;
+    padding: 1rem 0;
+}
+
+.Header {
+    font-size: calc(25pt + (50 - 25) * ((100vw - 300px) / (1920 - 300)));
+    background-color: #10131a;
+    border-radius: 25px;
+    min-height: calc(75px + (100 - 75) * ((100vw - 300px) / (1920 - 300)));
+    text-align: center;
+    line-height: calc(75px + (100 - 75) * ((100vw - 300px) / (1920 - 300)));
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 2rem 0
+}
