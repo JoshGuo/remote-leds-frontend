@@ -8,23 +8,34 @@ class FormContents extends React.Component {
 
         this.descriptions = [
             "Turns off the lights",
-            "Sets lights to the specified color",
+            "Sets the lights to the specified color",
             "Sets the lights to a rainbow fade",
-            "Sets lights to flash the specified color (aka wake me up from a nap)."
+            "Sets the lights to flash the specified color"
         ]
+
+        this.name = React.createRef();
+        this.color = React.createRef();
 
     }
 
     formSubmission = (type) => {
         if (type === 0) {
-            console.log("Sending Plain Form");
+            this.props.sendFormCallback(
+                this.props.activeForm,
+                this.name.current.value === "" ? "Anon" : this.name.current.value
+            );
         }else if (type === 1) {
-            console.log("Sending Color Form")
+            this.props.sendFormCallback(
+                this.props.activeForm, 
+                this.name.current.value === "" ? "Anon" : this.name.current.value,
+                this.color.current.value.toUpperCase()
+            );
         }
     }
 
     renderForm = () => {
         switch(this.props.activeForm) {
+            case -3: return this.renderCompletedForm();
             case -2: return <p></p>
             case -1: return this.renderGenericForm();
             case 0: return this.renderColorPickerForm();
@@ -43,6 +54,9 @@ class FormContents extends React.Component {
                     <h6>{this.descriptions[index]}</h6>
                 </Row>
                 <Row>
+                    Name: <input style={{margin: "0 1rem", width: "25%", color: "white"}} ref={this.name} type="text" placeholder="Anonymous" defaultValue=""/> 
+                </Row>
+                <Row>
                     <Button style={{backgroundColor: "#10131a", borderStyle: "solid", borderWidth: "1px"}} 
                         waves="green" 
                         onClick={() => this.formSubmission(0)}>
@@ -55,16 +69,16 @@ class FormContents extends React.Component {
 
     renderColorPickerForm() {
         let index = this.props.activeForm + 1;
-        let color;
-
         return(
             <div className="FormContents">
                 <Row>
                     <h6>{this.descriptions[index]}</h6>
                 </Row>
                 <Row>
-                    <input node={color} type="color" defaultValue="#FFFFFF"/> 
-                    <h6>{}</h6>
+                    Name: <input style={{margin: "0 1rem", width: "25%", color: "white"}} ref={this.name} type="text" placeholder="Anonymous" defaultValue=""/> 
+                </Row>
+                <Row>
+                    Color: <input style={{margin: "0 1rem"}} ref={this.color} type="color" defaultValue="#FFFFFF"/> 
                 </Row>
                 <Row>
                     <Button style={{backgroundColor: "#10131a", borderStyle: "solid", borderWidth: "1px"}} 
@@ -77,8 +91,25 @@ class FormContents extends React.Component {
         );
     }
 
+    renderCompletedForm() {
+        return(
+            <div className="FormContents">
+                <Row>
+                    <h5>Form submitted!</h5>
+                </Row>
+                <Row>
+                    <Button style={{backgroundColor: "#10131a", borderStyle: "solid", borderWidth: "1px"}} 
+                        waves="green" 
+                        onClick={() => this.props.changeFormCallback(-2)}>
+                        OK
+                    </Button>
+                </Row>
+            </div>
+        );
+    }
+
     render() {
-        return this.renderForm();
+        return this.props.isLoading ? <div>Sending...</div> : this.renderForm();
     }
 }
 

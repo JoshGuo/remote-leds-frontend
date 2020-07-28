@@ -10,6 +10,7 @@ class LEDForm extends React.Component {
             activeForm: -2,
             isLoading: false
         };
+        this.apiDomain = "http://localhost:5000/queue";
     }
 
     changeForm = (form) => {
@@ -21,11 +22,30 @@ class LEDForm extends React.Component {
     }
 
     sendForm = (mode, name, color) => {
-        axios.post('url', {
-            mode: mode,
-            name: name,
-            color: color
-        });
+        this.setState({isLoading: true});
+
+        if(color) { //Form with color
+            axios.post(this.apiDomain + "/enqueue/", {
+                mode: mode,
+                name: name,
+                color: color
+            }).then(() => 
+                this.setState({
+                    isLoading: false, 
+                    activeForm: -3
+                })
+            );
+        }else{ //Basic form with no other properties
+            axios.post(this.apiDomain + "/enqueue/", {
+                mode: mode,
+                name: name
+            }).then(() => 
+                this.setState({
+                    isLoading: false,
+                    activeForm: -3
+                })
+            );
+        }
     }
     
     render() {
@@ -53,7 +73,6 @@ class LEDForm extends React.Component {
 
         return (
             <Container>
-                <h5>Choose a Setting</h5>
                 <Row>
                     <Col s={3}>
                         <Button style={this.state.activeForm === -1 ? clickedButton : unclickedButton} waves="light" onClick={() => this.changeForm(-1)}>
@@ -76,7 +95,7 @@ class LEDForm extends React.Component {
                         </Button>
                     </Col>
                 </Row>
-                <FormContents activeForm={this.state.activeForm} sendFormCallback={this.state.sendForm}></FormContents>
+                <FormContents activeForm={this.state.activeForm} changeFormCallback={this.changeForm} sendFormCallback={this.sendForm} isLoading={this.state.isLoading}></FormContents>
             </Container>
         );
     }

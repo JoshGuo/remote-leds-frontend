@@ -5,4 +5,9 @@
     border-width: 3px;
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 10rem;
+}
+
+::placeholder {
+    color: gray
 }

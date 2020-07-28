@@ -14,10 +14,9 @@ class Home extends React.Component {
                             Change my LEDs :>
                         </div>
                     </div>
-                    <p style={{fontSize: "15pt"}}>Welcome! This was meant to be a fun project to interact with my friends during quaratine. <br/>
+                    <p style={{fontSize: "15pt"}}>Welcome!<br/>
                         This has been designed with desktop in mind, but should at least be functional with mobile. Enjoy!
                     </p>
-                    -----------------------------
                     <LEDForm/>
                 </Container>
                 <Footer/>
