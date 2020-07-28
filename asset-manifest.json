@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/remote-leds/static/css/main.dafaebda.chunk.css",
-    "main.js": "/remote-leds/static/js/main.19148caa.chunk.js",
-    "main.js.map": "/remote-leds/static/js/main.19148caa.chunk.js.map",
+    "main.js": "/remote-leds/static/js/main.32833244.chunk.js",
+    "main.js.map": "/remote-leds/static/js/main.32833244.chunk.js.map",
     "runtime-main.js": "/remote-leds/static/js/runtime-main.95d3ae03.js",
     "runtime-main.js.map": "/remote-leds/static/js/runtime-main.95d3ae03.js.map",
     "static/js/2.5b48822b.chunk.js": "/remote-leds/static/js/2.5b48822b.chunk.js",
     "static/js/2.5b48822b.chunk.js.map": "/remote-leds/static/js/2.5b48822b.chunk.js.map",
     "index.html": "/remote-leds/index.html",
-    "precache-manifest.d8ec648fa96a0bd7466f4c5bc6432b0f.js": "/remote-leds/precache-manifest.d8ec648fa96a0bd7466f4c5bc6432b0f.js",
+    "precache-manifest.c1d99165a41a054c83efaf7c3bacd233.js": "/remote-leds/precache-manifest.c1d99165a41a054c83efaf7c3bacd233.js",
     "service-worker.js": "/remote-leds/service-worker.js",
     "static/css/main.dafaebda.chunk.css.map": "/remote-leds/static/css/main.dafaebda.chunk.css.map",
     "static/js/2.5b48822b.chunk.js.LICENSE.txt": "/remote-leds/static/js/2.5b48822b.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.95d3ae03.js",
     "static/js/2.5b48822b.chunk.js",
     "static/css/main.dafaebda.chunk.css",
-    "static/js/main.19148caa.chunk.js"
+    "static/js/main.32833244.chunk.js"
   ]
 }
