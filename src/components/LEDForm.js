@@ -10,7 +10,7 @@ class LEDForm extends React.Component {
             activeForm: -2,
             isLoading: false
         };
-        this.apiDomain = "http://localhost:5000/queue";
+        this.apiDomain = "https://remote-leds.herokuapp.com";
     }
 
     changeForm = (form) => {
