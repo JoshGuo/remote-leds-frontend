@@ -1,4 +1,5 @@
 {
+  "proxy": "https://remote-leds.herokuapp.com",
   "homepage": "http://joshguo.github.io/remote-leds",
   "name": "client",
   "version": "0.1.0",

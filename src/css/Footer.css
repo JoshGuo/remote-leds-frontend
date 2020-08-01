@@ -1,14 +1,18 @@
 .Footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    margin-top: 4rem;
+}
+
+.FooterText {
     font-size: calc(10pt + (15 - 10) * ((100vw - 300px) / (1920 - 300)));
     min-height: 50px;
     width: 100%;
     background-color: #10131a;
     border-top-style: solid;
-    position: fixed;
-    bottom: 0px;
     border-top-width: 1px;
     line-height: 50px;
-    margin-top: 4rem;
 }
 
 a {

@@ -98,6 +98,9 @@ class FormContents extends React.Component {
                     <h5>Form submitted!</h5>
                 </Row>
                 <Row>
+                    <h6>Give a few second for the LEDs settings to update</h6>
+                </Row>
+                <Row>
                     <Button style={{backgroundColor: "#10131a", borderStyle: "solid", borderWidth: "1px"}} 
                         waves="green" 
                         onClick={() => this.props.changeFormCallback(-2)}>
