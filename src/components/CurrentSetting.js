@@ -23,7 +23,7 @@ class CurrentSetting extends React.Component {
             case -1: return this.renderOff();
             case 0: return this.renderColor();
             case 1: return this.renderFade();
-            case 2: return( "flash");
+            case 2: return this.renderFlash();
             default: return("loading...");
         }
         
