@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0f993a575583378a40a8266e402cebb2",
+    "revision": "5a9da49188afbd5a5c5a4898de2de4d9",
     "url": "/remote-leds/index.html"
   },
   {
-    "revision": "65381efc98a8de0e919a",
-    "url": "/remote-leds/static/css/main.dafaebda.chunk.css"
+    "revision": "5beb19bf39ede9d3994e",
+    "url": "/remote-leds/static/css/main.280f32bb.chunk.css"
   },
   {
     "revision": "7e4eded5f916dcbe9e1d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/remote-leds/static/js/2.5b48822b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65381efc98a8de0e919a",
-    "url": "/remote-leds/static/js/main.32833244.chunk.js"
+    "revision": "5beb19bf39ede9d3994e",
+    "url": "/remote-leds/static/js/main.2306b2a3.chunk.js"
   },
   {
     "revision": "a5890c15fcd4bd82e2b5",
