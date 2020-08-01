@@ -11,11 +11,11 @@ class Home extends React.Component {
                 <Container>
                     <div className="Header">
                         <div style={{display:"inline-block"}}>
-                            Change my LEDs :>
+                            Change my LEDs :&gt;
                         </div>
                     </div>
                     <p style={{fontSize: "15pt"}}>Welcome!<br/>
-                        This has been designed with desktop in mind, but should at least be functional with mobile. Enjoy!
+                        Made this out of quarantine boredom. Enjoy.
                     </p>
                     <LEDForm/>
                 </Container>

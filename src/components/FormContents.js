@@ -10,7 +10,7 @@ class FormContents extends React.Component {
             "Turns off the lights",
             "Sets the lights to the specified color",
             "Sets the lights to a rainbow fade",
-            "Sets the lights to flash the specified color"
+            "Sets the lights to flash the specified color (AKA wake me up in the middle of the night)."
         ]
 
         this.name = React.createRef();

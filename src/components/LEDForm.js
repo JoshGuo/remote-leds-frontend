@@ -10,7 +10,7 @@ class LEDForm extends React.Component {
             activeForm: -2,
             isLoading: false
         };
-        this.apiDomain = "https://remote-leds.herokuapp.com";
+        this.apiDomain = "https://remote-leds.herokuapp.com/queue";
     }
 
     changeForm = (form) => {
@@ -76,22 +76,22 @@ class LEDForm extends React.Component {
                 <Row>
                     <Col s={3}>
                         <Button style={this.state.activeForm === -1 ? clickedButton : unclickedButton} waves="light" onClick={() => this.changeForm(-1)}>
-                            Turn Off
+                            {window.innerWidth > 400 ? "Turn Off" : "1"}
                         </Button>
                     </Col>
                     <Col s={3}>
                         <Button style={this.state.activeForm === 0 ? clickedButton : unclickedButton} waves="light" onClick={() => this.changeForm(0)}>
-                            Set Color
+                            {window.innerWidth > 400 ? "Set Color" : "2"}
                         </Button>
                     </Col>
                     <Col s={3}>
                         <Button style={this.state.activeForm === 1 ? clickedButton : unclickedButton} waves="light" onClick={() => this.changeForm(1)}>
-                            Fade
+                            {window.innerWidth > 400 ? "Rainbow" : "3"}
                         </Button>
                     </Col>
                     <Col s={3}>
                         <Button style={this.state.activeForm === 2 ? clickedButton : unclickedButton} waves="light" onClick={() => this.changeForm(2)}>
-                            Flash
+                            {window.innerWidth > 400 ? "Flash" : "4"}
                         </Button>
                     </Col>
                 </Row>
